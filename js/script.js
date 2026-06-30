@@ -1,69 +1,49 @@
-// Seletores dos elementos usados nas interações da página
-const menuBotao = document.getElementById('menuBotao');
-const menuLista = document.getElementById('menuLista');
-const temaBotao = document.getElementById('temaBotao');
-const formContato = document.getElementById('formContato');
+const btnMenu = document.getElementById("btn-menu");
+const listaMenu = document.getElementById("lista-menu");
+const btnTema = document.getElementById("btn-tema");
+const formulario = document.getElementById("form-contato");
+const resultado = document.getElementById("resultado");
 
-// Abre e fecha o menu em telas menores
-menuBotao.addEventListener('click', () => {
-    const menuAberto = menuLista.classList.toggle('ativo');
-    menuBotao.setAttribute('aria-expanded', menuAberto);
+// Menu responsivo para celular
+btnMenu.addEventListener("click", function () {
+  listaMenu.classList.toggle("ativo");
 });
 
-// Alterna entre tema claro e tema escuro
-function alternarTema() {
-    document.body.classList.toggle('tema-escuro');
-    const escuroAtivo = document.body.classList.contains('tema-escuro');
-    temaBotao.textContent = escuroAtivo ? 'Tema claro' : 'Tema escuro';
-}
+// Alternância entre tema claro e escuro
+btnTema.addEventListener("click", function () {
+  document.body.classList.toggle("escuro");
 
-temaBotao.addEventListener('click', alternarTema);
+  if (document.body.classList.contains("escuro")) {
+    btnTema.textContent = "☀️";
+  } else {
+    btnTema.textContent = "🌙";
+  }
+});
 
-// Função simples para validar formato de e-mail
-function emailValido(email) {
-    const expressao = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return expressao.test(email);
-}
+// Validação do formulário de contato
+formulario.addEventListener("submit", function (evento) {
+  evento.preventDefault();
 
-// Remove mensagens de erro antes de uma nova validação
-function limparErros() {
-    document.getElementById('erroNome').textContent = '';
-    document.getElementById('erroEmail').textContent = '';
-    document.getElementById('erroMensagem').textContent = '';
-    document.getElementById('mensagemSucesso').textContent = '';
-}
+  const nome = document.getElementById("nome").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const mensagem = document.getElementById("mensagem").value.trim();
 
-// Validação do formulário de contato e simulação de envio
-formContato.addEventListener('submit', (evento) => {
-    evento.preventDefault();
-    limparErros();
+  if (nome === "" || email === "" || mensagem === "") {
+    resultado.style.color = "red";
+    resultado.textContent = "Por favor, preencha todos os campos.";
+    return;
+  }
 
-    const nome = document.getElementById('nome').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const mensagem = document.getElementById('mensagem').value.trim();
-    let formularioValido = true;
+  const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (nome === '') {
-        document.getElementById('erroNome').textContent = 'Preencha o seu nome.';
-        formularioValido = false;
-    }
+  if (!emailValido.test(email)) {
+    resultado.style.color = "red";
+    resultado.textContent = "Digite um e-mail válido.";
+    return;
+  }
 
-    if (email === '') {
-        document.getElementById('erroEmail').textContent = 'Preencha o seu e-mail.';
-        formularioValido = false;
-    } else if (!emailValido(email)) {
-        document.getElementById('erroEmail').textContent = 'Digite um e-mail válido.';
-        formularioValido = false;
-    }
+  resultado.style.color = "#16a34a";
+  resultado.textContent = "Mensagem enviada com sucesso!";
 
-    if (mensagem === '') {
-        document.getElementById('erroMensagem').textContent = 'Digite a sua mensagem.';
-        formularioValido = false;
-    }
-
-    if (formularioValido) {
-        formContato.reset();
-        document.getElementById('mensagemSucesso').textContent = 'Mensagem enviada com sucesso!';
-        alert('Mensagem enviada com sucesso!');
-    }
+  formulario.reset();
 });
