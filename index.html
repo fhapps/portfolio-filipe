@@ -1,142 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio pessoal de Filipe Hanon de Siqueira da Costa, estudante de Análise e Desenvolvimento de Sistemas.">
-    <title>Filipe Hanon | Portfólio</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio | Filipe Hanon</title>
+  <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-    <!-- Cabeçalho fixo com menu de navegação principal -->
-    <header class="cabecalho">
-        <nav class="menu" aria-label="Menu principal">
-            <a href="#sobre" class="logo">Filipe.dev</a>
-            <button class="menu-botao" id="menuBotao" aria-label="Abrir menu" aria-expanded="false">☰</button>
-            <ul class="menu-lista" id="menuLista">
-                <li><a href="#sobre">Sobre mim</a></li>
-                <li><a href="#formacao">Formação</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-            <button class="tema-botao" id="temaBotao" type="button">Tema escuro</button>
-        </nav>
-    </header>
 
-    <main>
-        <!-- Seção de apresentação pessoal -->
-        <section id="sobre" class="secao hero">
-            <div class="hero-texto">
-                <p class="etiqueta">Portfólio pessoal</p>
-                <h1>Olá, eu sou <span>Filipe Hanon</span>.</h1>
-                <p class="descricao">
-                    Sou estudante de Análise e Desenvolvimento de Sistemas e estou desenvolvendo minha base em programação web,
-                    com foco em HTML, CSS, JavaScript e criação de soluções digitais funcionais.
-                </p>
-                <a class="botao-principal" href="#portfolio">Ver projetos</a>
-            </div>
-            <div class="cartao-perfil" aria-label="Resumo do perfil">
-                <div class="avatar">FH</div>
-                <h2>Filipe Hanon</h2>
-                <p>Estudante de ADS</p>
-                <p>Rio de Janeiro - RJ</p>
-            </div>
-        </section>
+  <header>
+    <nav class="menu">
+      <h1>Filipe Hanon</h1>
 
-        <section class="secao conteudo" aria-labelledby="titulo-sobre">
-            <h2 id="titulo-sobre">Sobre mim</h2>
-            <p>
-                Tenho interesse por tecnologia, desenvolvimento web e soluções que ajudam pessoas e empresas no dia a dia.
-                Gosto de aprender na prática, criando páginas, testando ideias e melhorando a experiência visual e funcional dos projetos.
-            </p>
-            <div class="grade-cards">
-                <article class="card">
-                    <h3>Objetivo</h3>
-                    <p>Construir uma carreira na área de tecnologia, evoluindo em programação, análise de sistemas e desenvolvimento web.</p>
-                </article>
-                <article class="card">
-                    <h3>Hobbies</h3>
-                    <p>Jogos de videogame, cardgames e futebol fazem parte da minha rotina de lazer e criatividade.</p>
-                </article>
-                <article class="card">
-                    <h3>Perfil</h3>
-                    <p>Sou curioso, dedicado e busco transformar aprendizados em projetos práticos e organizados.</p>
-                </article>
-            </div>
-        </section>
+      <button id="btn-menu">☰</button>
 
-        <!-- Seção obrigatória de formação -->
-        <section id="formacao" class="secao conteudo destaque" aria-labelledby="titulo-formacao">
-            <h2 id="titulo-formacao">Formação</h2>
-            <div class="linha-tempo">
-                <article>
-                    <span>Atual</span>
-                    <h3>Análise e Desenvolvimento de Sistemas</h3>
-                    <p>Curso superior com foco em lógica de programação, banco de dados, desenvolvimento web e análise de sistemas.</p>
-                </article>
-                <article>
-                    <span>Disciplina</span>
-                    <h3>Fundamentos da Programação Web</h3>
-                    <p>Estudo de HTML5, CSS3 e JavaScript para criação de páginas modernas, responsivas e interativas.</p>
-                </article>
-                <article>
-                    <span>Idiomas</span>
-                    <h3>Português e Inglês</h3>
-                    <p>Português nativo e inglês em desenvolvimento para leitura, estudos e conteúdos técnicos.</p>
-                </article>
-            </div>
-        </section>
+      <ul id="lista-menu">
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#formacao">Formação</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
 
-        <!-- Seção obrigatória de portfólio -->
-        <section id="portfolio" class="secao conteudo" aria-labelledby="titulo-portfolio">
-            <h2 id="titulo-portfolio">Portfólio</h2>
-            <p>Projetos e experiências que representam minha evolução prática em tecnologia, comunicação digital e organização de soluções.</p>
-            <div class="grade-projetos">
-                <article class="projeto">
-                    <h3>Catálogo de Produtos</h3>
-                    <p>Modelo de catálogo online com organização de itens, informações comerciais e botões de contato.</p>
-                    <a href="https://github.com/Fhapps" target="_blank" rel="noopener">Ver GitHub</a>
-                </article>
-                <article class="projeto">
-                    <h3>Calculadora de Parcelamento</h3>
-                    <p>Projeto para simular valores de entrada, parcelas e condições de pagamento usando lógica em JavaScript.</p>
-                    <a href="https://github.com/Fhapps" target="_blank" rel="noopener">Ver GitHub</a>
-                </article>
-                <article class="projeto">
-                    <h3>Portfólio Pessoal</h3>
-                    <p>Este site foi desenvolvido com HTML5, CSS3 e JavaScript puro como atividade prática da disciplina.</p>
-                    <a href="#sobre">Ver página</a>
-                </article>
-            </div>
-        </section>
+      <button id="btn-tema">🌙</button>
+    </nav>
+  </header>
 
-        <!-- Seção obrigatória de contato com formulário validado por JavaScript -->
-        <section id="contato" class="secao conteudo destaque" aria-labelledby="titulo-contato">
-            <h2 id="titulo-contato">Contato</h2>
-            <p>Preencha o formulário abaixo para simular o envio de uma mensagem.</p>
-            <form id="formContato" class="formulario" novalidate>
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
-                <span class="erro" id="erroNome"></span>
+  <main>
 
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="seuemail@dominio.com">
-                <span class="erro" id="erroEmail"></span>
+    <section id="sobre" class="secao destaque">
+      <div class="texto">
+        <h2>Olá, eu sou Filipe Hanon</h2>
+        <p>
+          Sou estudante de Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia,
+          criação de sites e soluções digitais. Busco desenvolver projetos modernos,
+          funcionais e úteis para pessoas e empresas.
+        </p>
+        <p>
+          Nos meus momentos livres gosto de jogar videogame, cardgames e acompanhar futebol.
+        </p>
+      </div>
 
-                <label for="mensagem">Mensagem</label>
-                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem"></textarea>
-                <span class="erro" id="erroMensagem"></span>
+      <div class="foto-area">
+        <img src="imagens/perfil.jpg" alt="Foto de Filipe Hanon" class="foto-perfil">
+      </div>
+    </section>
 
-                <button type="submit" class="botao-principal">Enviar mensagem</button>
-                <p id="mensagemSucesso" class="sucesso" role="status"></p>
-            </form>
-        </section>
-    </main>
+    <section id="formacao" class="secao">
+      <h2>Formação</h2>
 
-    <footer class="rodape">
-        <p>© 2026 Filipe Hanon de Siqueira da Costa - Portfólio acadêmico.</p>
-    </footer>
+      <div class="cards">
+        <div class="card">
+          <h3>Curso</h3>
+          <p>Análise e Desenvolvimento de Sistemas</p>
+        </div>
 
-    <script src="js/script.js"></script>
+        <div class="card">
+          <h3>Instituição</h3>
+          <p>Centro Universitário Internacional UNINTER</p>
+        </div>
+
+        <div class="card">
+          <h3>Idiomas</h3>
+          <p>Português e Inglês</p>
+        </div>
+
+        <div class="card">
+          <h3>Disciplina</h3>
+          <p>Fundamentos da Programação Web</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="secao">
+      <h2>Portfólio</h2>
+      <p class="subtitulo">Alguns projetos e trabalhos desenvolvidos.</p>
+
+      <div class="portfolio-grid">
+
+        <div class="projeto">
+          <img src="imagens/portfolio/consultorio.jpg" alt="Projeto Consultório do iPhone">
+          <div>
+            <h3>Consultório do iPhone</h3>
+            <p>Projeto voltado para divulgação de iPhones, assistência técnica e atendimento online.</p>
+          </div>
+        </div>
+
+        <div class="projeto">
+          <img src="imagens/portfolio/catalogo.jpg" alt="Catálogo de iPhones">
+          <div>
+            <h3>Catálogo de iPhones</h3>
+            <p>Catálogo responsivo para apresentar modelos, valores e opções de compra.</p>
+          </div>
+        </div>
+
+        <div class="projeto">
+          <img src="imagens/portfolio/calculadora.jpg" alt="Calculadora de Parcelamento">
+          <div>
+            <h3>Calculadora de Parcelamento</h3>
+            <p>Sistema em JavaScript para simular parcelas e facilitar o atendimento ao cliente.</p>
+          </div>
+        </div>
+
+        <div class="projeto">
+          <img src="imagens/portfolio/alma-verde.jpg" alt="Projeto Alma Verde">
+          <div>
+            <h3>Alma Verde</h3>
+            <p>Projeto visual e digital para divulgação de kokedamas, terrários e produtos artesanais.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contato" class="secao">
+      <h2>Contato</h2>
+
+      <form id="form-contato">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" placeholder="Digite seu nome">
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="Digite seu e-mail">
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" placeholder="Digite sua mensagem"></textarea>
+
+        <button type="submit">Enviar mensagem</button>
+      </form>
+
+      <p id="resultado"></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 - Filipe Hanon de Siqueira da Costa | RU: 5571558</p>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
