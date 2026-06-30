@@ -4,20 +4,24 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background: #f4f6f8;
+  background-color: #f4f6f8;
   color: #222;
   line-height: 1.6;
 }
 
 body.escuro {
-  background: #121212;
+  background-color: #121212;
   color: #f5f5f5;
 }
 
 header {
-  background: #0f172a;
+  background-color: #0f172a;
   color: white;
   position: sticky;
   top: 0;
@@ -26,7 +30,7 @@ header {
 
 .menu {
   max-width: 1100px;
-  margin: auto;
+  margin: 0 auto;
   padding: 18px;
   display: flex;
   align-items: center;
@@ -55,7 +59,7 @@ header {
 
 #btn-menu,
 #btn-tema {
-  background: #38bdf8;
+  background-color: #38bdf8;
   color: #0f172a;
   border: none;
   padding: 8px 12px;
@@ -70,7 +74,7 @@ header {
 
 .secao {
   max-width: 1100px;
-  margin: auto;
+  margin: 0 auto;
   padding: 70px 20px;
 }
 
@@ -114,17 +118,17 @@ header {
 .card,
 .projeto,
 form {
-  background: white;
+  background-color: white;
   color: #222;
   padding: 25px;
   border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 body.escuro .card,
 body.escuro .projeto,
 body.escuro form {
-  background: #1e293b;
+  background-color: #1e293b;
   color: white;
 }
 
@@ -146,7 +150,7 @@ body.escuro form {
 
 .projeto {
   overflow: hidden;
-  transition: 0.3s;
+  transition: transform 0.3s;
 }
 
 .projeto:hover {
@@ -159,7 +163,7 @@ body.escuro form {
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 15px;
-  background: #ddd;
+  background-color: #ddd;
 }
 
 form {
@@ -182,10 +186,11 @@ textarea {
 
 textarea {
   min-height: 120px;
+  resize: vertical;
 }
 
 form button {
-  background: #0284c7;
+  background-color: #0284c7;
   color: white;
   border: none;
   padding: 14px;
@@ -195,7 +200,7 @@ form button {
 }
 
 form button:hover {
-  background: #0369a1;
+  background-color: #0369a1;
 }
 
 #resultado {
@@ -207,7 +212,7 @@ form button:hover {
 footer {
   text-align: center;
   padding: 25px;
-  background: #0f172a;
+  background-color: #0f172a;
   color: white;
 }
 
