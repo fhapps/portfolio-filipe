@@ -23,9 +23,9 @@ btnTema.addEventListener("click", function () {
   document.body.classList.toggle("claro");
 
   if (document.body.classList.contains("claro")) {
-    btnTema.textContent = "☀️";
+    btnTema.textContent = "Claro";
   } else {
-    btnTema.textContent = "🌙";
+    btnTema.textContent = "Escuro";
   }
 });
 
